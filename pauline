@@ -1,0 +1,27 @@
+let flower = [];
+
+function mintNFT(name, color, rarity) {
+    let nft = {
+        name: name,
+        color: color,
+        rarity: rarity,
+    };
+    flower.push(nft);
+}
+
+function listNFTs() {
+    console.log("List of FLower NFts:");
+    flower.forEach((nft, index) => {
+        console.log(`NFT ${index + 1}; Name - ${nft.name}, Color - ${nft.color}, Rarity - ${nft.rarity} `);
+    });
+    }
+function getTotalSupply() {
+    console.log(`Total number of Flower NFTs minted: ${flower.length}`);
+}
+mintNFT("Rose", "Red", "Common");
+mintNFT("Sunflower", "Yellow", "Rare");
+mintNFT("Lily", "White", "Uncommon");
+
+listNFTs();
+
+getTotalSupply();
